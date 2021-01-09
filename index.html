@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Anime Character</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <section>
         <div class="heading">
-            <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY ?</h1>
+            <h1 class="stroke">WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY ?</h1>
         </div>
         <div class="centerDiv">
             <div class="info">
@@ -24,12 +24,13 @@
                 <img src="welcome.jpg" alt="default image" width="300" height="200" class="imgchange">
             </div>
             <button type="submit">GET CHARACTER</button>
-            <h4>@Brolite</h4>
+            <h3 class="copy">@BROLITE</h3>
 
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.j?s"></script> -->
     <script>
         $(document).ready(function() {
             $('button').click(function() {

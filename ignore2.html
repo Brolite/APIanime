@@ -1,1 +1,56 @@
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio illum saepe incidunt, fuga praesentium quas obcaecati voluptatibus similique quo illo.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Anime Character</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<style>
+    .copy {
+        text-decoration-line: underline;
+        text-decoration-color: rgb(255, 255, 255);
+        text-decoration-thickness: 3px;
+        stroke: whitesmoke;
+        stroke-width: 2px;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="heading">
+            <h1 class="stroke">WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY ?</h1>
+        </div>
+        <div class="centerDiv">
+            <div class="info">
+                <label for="name">ENTER YOUR NAME</label><br>
+                <input type="text" name="name" id="nameid" autocomplete="off" />
+            </div>
+            <div class="imgDiv">
+                <img src="welcome.jpg" alt="default image" width="300" height="200" class="imgchange">
+            </div>
+            <button type="submit">GET CHARACTER</button>
+            <h3 class="copy">@Brolite</h3>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                const name = $('#nameid').val();
+                // alert(name);
+                $('.imgchange').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+                const b = $('.imagechange');
+                console.log(b);
+            });
+        });
+    </script>
+</body>
+
+</html>
