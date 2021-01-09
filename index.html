@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Anime Character</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="heading">
+            <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY ?</h1>
+        </div>
+        <div class="centerDiv">
+            <div class="info">
+                <label for="name">ENTER YOUR NAME</label><br>
+                <input type="text" name="name" id="nameid" autocomplete="off" />
+            </div>
+            <div class="imgDiv">
+                <img src="welcome.jpg" alt="default image" width="300" height="200" class="imgchange">
+            </div>
+            <button type="submit">GET CHARACTER</button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                const name = $('#nameid').val();
+                // alert(name);
+                $('.imgchange').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+                const b = $('.imagechange');
+                console.log(b);
+            });
+        });
+    </script>
+</body>
+
+</html>
